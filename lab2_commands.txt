@@ -1,0 +1,12 @@
+# Створення файлів конфігурації
+type nul > Dockerfile
+type nul > docker-compose.yml
+
+# Запуск контейнерів
+docker compose up -d --build
+
+# Перевірка запущених контейнерів
+docker compose ps
+
+# Перегляд встановлених бібліотек всередині контейнера
+docker compose exec web pip list
